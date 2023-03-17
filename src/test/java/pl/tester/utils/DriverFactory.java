@@ -10,7 +10,7 @@ public class DriverFactory {
     public static WebDriver getDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-        WebDriverManager.chromedriver().setup();;
+        WebDriverManager.chromedriver().setup();
         return new ChromeDriver(options);
     }
 }
