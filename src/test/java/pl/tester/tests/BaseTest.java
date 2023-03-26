@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import pl.tester.utils.DriverFactory;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
@@ -24,5 +23,4 @@ public class BaseTest {
     public void tearDown() {
         driver.quit();
     }
-
 }
