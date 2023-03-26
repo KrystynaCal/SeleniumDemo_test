@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pl.tester.utils.SeleniumHelper;
 
 public class ProductPage {
 
@@ -20,6 +21,7 @@ public class ProductPage {
     }
 
     public ProductPage addProductToCart(){
+        SeleniumHelper.waitforClickable(addToCartButton, driver);
         addToCartButton.click();
         return this;
     }

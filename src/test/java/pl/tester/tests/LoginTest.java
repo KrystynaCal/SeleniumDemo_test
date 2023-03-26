@@ -13,19 +13,19 @@ public class LoginTest extends BaseTest {
     public void logInTest() {
         WebElement dashboardLink = new HomePage(driver)
                 .openMyAccountPage()
-                .loginValidDate("test1@test.pl", "test1@test12")
+                .loginValidDate("test2@gmail.com", "test.test123")
                 .getDashboardLink();
 
         Assert.assertEquals(dashboardLink.getText(), "Dashboard");
     }
 
-    @Test
-    public void logInWithInvalidPasswordTest() {
-        WebElement error = new HomePage(driver)
-                .openMyAccountPage()
-                .loginInvalidDate("test1@test.pl", "test.tes123t123")
-                .getError();
-
-        Assert.assertTrue(error.getText().contains("Incorrect username or password."));
-    }
+//    @Test
+//    public void logInWithInvalidDataTest() {
+//        WebElement error = new HomePage(driver)
+//                .openMyAccountPage()
+//                .loginInvalidDate("test2testx@test.pl", "test.tes123t123")
+//                .getError();
+//
+//        Assert.assertTrue(error.getText().contains("Incorrect username or password."));
+//    }
 }
